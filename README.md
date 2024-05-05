@@ -1,4 +1,4 @@
-# Tên Game : A difficult game about jumping
+# A difficult game about jumping
 ![menu](https://github.com/VuTienTuanTrung/Game/assets/62925438/1d2e443b-0d05-4eed-9df6-ae10ec0acdde)
 
 ## Thành viên nhóm : 
