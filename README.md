@@ -7,9 +7,9 @@
 - Doãn Đoàn Đức Minh.
 
 ## Điều mà nhóm thấy tâm đắc ở game
-Có thể chỉnh sửa lại map rất dễ dàng
-Cơ chế nhảy khá tốt
-Khó để phá đảo trong thời gian ngắn.
+- Có thể chỉnh sửa lại map rất dễ dàng.
+- Cơ chế nhảy khá tốt.
+- Khó để phá đảo trong thời gian ngắn.
 
 
 
