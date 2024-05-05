@@ -24,7 +24,7 @@ Chim cánh cụt  đi chơi cùng bạn bè nhưng do mải chơi quá, bạn b�
 
 ## Đóng góp.
 - Vẽ map cho cả game : Ngô Đức Thịnh.
-- Code game : Vũ Tiến Tuấn Trung, Doãn Đoàn Đức Minh.
+- Code game : Vũ Tiến Tuấn Trung
 
 ## Phát triển thêm.
 - Game sau này sẽ phát triển thêm phần save game để người chơi có thể chơi tiếp tục.
