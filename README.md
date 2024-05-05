@@ -6,6 +6,13 @@
 - Ngô Đức Thịnh.
 - Doãn Đoàn Đức Minh.
 
+## Điều mà nhóm thấy tâm đắc ở game
+Có thể chỉnh sửa lại map rất dễ dàng
+Cơ chế nhảy khá tốt
+Khó để phá đảo trong thời gian ngắn.
+
+
+
 ## Cốt truyện : 
 Chim cánh cụt  đi chơi cùng bạn bè nhưng do mải chơi quá, bạn bè về hết nhưng cậu ấy vẫn chơi tiếp. Sau đó là cuộc hành trình đi tìm lại nhà của mình. Trải qua đủ sự khắc nghiệt của thời tiết, liệu cậu ta có thể về nhà dược không?
 ## Cách chơi : 
@@ -16,12 +23,13 @@ Chim cánh cụt  đi chơi cùng bạn bè nhưng do mải chơi quá, bạn b�
 - Enter.
 - Space.
 - A.
-- S.
+- D.
   
-## Phần code có tham khảo một số nguồn:
+## Phần Game có tham khảo một số nguồn:
 - TinyXML : https://github.com/vmayoral/tinyxml
-- Map assets và nhân vật: https://itch.io
-
+- Map assets : https://itch.io
+- Nhân vật : https://devhive.itch.io/penguin
+- Âm thanh : https://pixabay.com
 ## Đóng góp.
 - Vẽ map cho cả game : Ngô Đức Thịnh.
 - Code game : Vũ Tiến Tuấn Trung
