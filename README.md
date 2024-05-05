@@ -27,7 +27,7 @@ Chim cánh cụt  đi chơi cùng bạn bè nhưng do mải chơi quá, bạn b�
   
 ## Phần Game có tham khảo một số nguồn:
 - TinyXML : https://github.com/vmayoral/tinyxml
-- Map assets : https://itch.io
+- Map tilesets : https://itch.io
 - Nhân vật : https://devhive.itch.io/penguin
 - Âm thanh : https://pixabay.com
 ## Đóng góp.
