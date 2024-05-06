@@ -14,7 +14,7 @@ Warrior::Warrior(Properties* props):Character(props)
     m_JumpForce = JUMP_FORCE;
 
     m_Collider = new Collider();                     //Collinder ở trong Physics.
-    m_Collider->SetBuffer(-79, -45, -29, -2);          //thay đổi giá trị buffer để collider không bị lệch so với nhân vật
+    m_Collider->SetBuffer(-84, -45, -15,0 );          //thay đổi giá trị buffer để collider không bị lệch so với nhân vật
     m_RigidBody =  new Rigidbody();
     m_RigidBody->SetGravity(5.0f);
 
@@ -30,11 +30,11 @@ void Warrior::Draw()
     m_Animation->Draw(m_Transform->X,m_Transform->Y,m_Width,m_Height);
 
     //Hiển thị collider
- /*   Vector2D cam = Camera::GetInstance()->GetPosition();
+    /*Vector2D cam = Camera::GetInstance()->GetPosition();
     SDL_Rect box = m_Collider->Get();
     box.x -= cam.X;
     box.y -= cam.Y;
-    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box); */
+    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box);*/
 }
 
 
@@ -65,7 +65,7 @@ void Warrior::Update(float dt)
     //Run backward
      if( Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)&&m_IsGrounded == true && !Input::GetInstance()->GetKeyDown(SDL_SCANCODE_SPACE))
    {
-           m_RigidBody->ApplyForceX(2.0f*BACKWARD);
+           m_RigidBody->ApplyForceX(2.5f*BACKWARD);
 
            m_LasDirection = -1.0f;
 
@@ -76,7 +76,7 @@ void Warrior::Update(float dt)
    //Run forward
     if( Input::GetInstance()->GetKeyDown(SDL_SCANCODE_D)&&m_IsGrounded == true&& !Input::GetInstance()->GetKeyDown(SDL_SCANCODE_SPACE ))
    {
-           m_RigidBody->ApplyForceX(2.0f*FORWARD);
+           m_RigidBody->ApplyForceX(2.5f*FORWARD);
 
            m_LasDirection = 1.0f;
 
@@ -181,7 +181,7 @@ void Warrior::Update(float dt)
     //move on x axis
 
 
-    m_RigidBody->Update(dt);                            // truyền dt vào là thông số thời gian trôi qua để tính vận tốc và vị wtrí
+        m_RigidBody->Update(dt);                            // truyền dt vào là thông số thời gian trôi qua để tính vận tốc và vị wtrí
         m_LastSafePosition.X = m_Transform->X;          // lưu lại vị trí an toàn trước khi di chuyển
 
     m_Transform->X += m_RigidBody->Position().X;       // hàm này để tăng giá trị của x trong m_Transform sau khi thay đỏi m_RigidBody
@@ -250,7 +250,6 @@ void Warrior::Update(float dt)
 
 
     }
-
     //Thay đổi m_Origin khi nhân vật di chuyển.
    // std::cout<<"x"<<m_Origin->X<<'y'<<m_Origin->Y<<std::endl;
     m_Origin->X = m_Transform->X - 1.6f*m_Width;

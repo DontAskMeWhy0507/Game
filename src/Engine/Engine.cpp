@@ -52,7 +52,8 @@ bool Engine::Init(){
     TextureManager::GetInstance()->Load("Background2", "assets/Images/he.png");
     TextureManager::GetInstance()->Load("Background3", "assets/Images/thu.png");
     TextureManager::GetInstance()->Load("Background4", "assets/Images/dong.png");
-    TextureManager::GetInstance()->Load("Background5", "assets/Images/bg5.png");
+    TextureManager::GetInstance()->Load("Background5", "assets/Images/6.png");
+    TextureManager::GetInstance()->Load("Background6", "assets/Images/final.png");
 
     TextureManager::GetInstance()->Load("Jump", "assets/Jump.png");
     TextureManager::GetInstance()->Load("Fall", "assets/Fall.png");
@@ -63,7 +64,7 @@ bool Engine::Init(){
 
 
 
-    player = new Warrior (new Properties ("player",300,9310,200,200));       //(Chỉ số id,x,y,width,height)
+    player = new Warrior (new Properties ("player",300,9330,200,200));       //(Chỉ số id,x,y,width,height)
     //x,y được lưu vào m_Transform. x,y là tọa độ của ảnh trên cửa sổ game
 
 
@@ -126,6 +127,8 @@ void Engine::Render(){
         TextureManager::GetInstance()->Draw("Background3",0,2650,1504,800);
         TextureManager::GetInstance()->Draw("Background4",0,1850,1504,800);
         TextureManager::GetInstance()->Draw("Background5",0,1050,1504,800);
+        TextureManager::GetInstance()->Draw("Background6",0,500,1504,800);
+
 
         m_LevelMap->Render();                                           //Tạo map tiled
         // render texture

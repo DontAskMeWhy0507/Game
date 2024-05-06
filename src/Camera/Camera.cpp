@@ -4,8 +4,6 @@ Camera* Camera::s_Instance = nullptr;
 
 //Update vị trí camera theo vị trí của player.
 void Camera::Update(){
-    if(m_Target == nullptr) std::cout<<"null"<<std::endl;
-    if(m_Target!=nullptr)std::cout<<"Not null"<<std::endl;
     if(m_Target != nullptr){        //nếu Point target không rỗng
    //     std::cout<<m_Target.X<<" "<<m_Target.Y<<std::endl;
        // std::cout<<"Khong rong";
