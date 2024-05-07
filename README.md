@@ -26,6 +26,9 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 - Có thể chỉnh sửa lại map rất dễ dàng.
 - Cơ chế nhảy tốt.
 - Khó để phá đảo trong thời gian ngắn.
+## 6. Cấu trúc game 
+Gồm phần main.cpp để chạy vòng lặp cho nó. 
+Lớp Engine là lớp chính cho hàm main. Gồm Init (khởi tạo game), Event (), Update, Renderer, Clean, Quite.
 
   
 ## 7. Phần Game có tham khảo một số nguồn
