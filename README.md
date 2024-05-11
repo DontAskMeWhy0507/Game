@@ -28,7 +28,7 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 - Khó để phá đảo trong thời gian ngắn.
 ## 6. Cấu trúc game 
 Gồm phần main.cpp để chạy vòng lặp cho nó. 
-Lớp Engine là lớp chính cho hàm main. Gồm Init (khởi tạo game), Event (), Update, Renderer, Clean, Quite.
+Lớp Engine là lớp chính cho hàm main. Gồm Init (khởi tạo game), Event (), Update, Renderer, Clean, Quit. Và các lớp khác deltaTim,camera,sound, physics,...
 
   
 ## 7. Phần Game có tham khảo một số nguồn
