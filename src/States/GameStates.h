@@ -5,8 +5,9 @@ enum class State {
     MENU,
     GAME,
     PAUSE,
-    SAVE,
-    QUIT
+    CONTINUE,
+    QUIT,
+    CONTROLS
 };
 class GameStates:GameObject
 {

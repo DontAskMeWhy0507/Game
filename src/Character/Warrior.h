@@ -23,6 +23,7 @@ class Warrior : public Character
         void Clean() ;
         void Update(float dt) ;
         bool GetGround() {return m_IsGrounded;};
+        void change();
 
    private:
         void AnimationState();
@@ -45,7 +46,7 @@ class Warrior : public Character
         float m_JumpForce;
         float m_LasDirection = 1.0f;       //0 is fall down, 1 is fall right, -1 is fall left
 
-
+        float SavedX,SavedY;
 
         Collider* m_Collider;
         Animation* m_Animation;

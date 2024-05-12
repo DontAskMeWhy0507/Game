@@ -16,7 +16,10 @@ public:
 
     int LoadMusic(std::string filename);
     int LoadSound(std::string filename);
-    void SetVolume(int v);
+    void PlusVolume(int v);
+    void MinusVolume(int v);
+    void MuteVolume();
+
     int PlayMusic(int m);
     int PlaySound(int s);
     void quitMixer();
@@ -27,7 +30,7 @@ private:
     std::vector <Mix_Chunk*> filesounds;
     std::vector <Mix_Music*> filemusic;
     static SoundManager* s_Instance;
-    int volume;
+    int volume = (MIX_MAX_VOLUME*10)/100;;
 
 };
 

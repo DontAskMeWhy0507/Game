@@ -10,7 +10,7 @@ SoundManager::SoundManager(){
         std::cerr << Mix_GetError() << std::endl;
 
     }
-    SetVolume(10);
+
 
 }
 
@@ -37,16 +37,33 @@ int SoundManager::LoadSound(std::string filename)
     return filesounds.size()-1;
 }
 
-void SoundManager::SetVolume (int v)
+void SoundManager::PlusVolume (int v)
 {
-    volume = (MIX_MAX_VOLUME*v)/100;
+    volume += (MIX_MAX_VOLUME*v)/100;
+    Mix_Volume(-1, volume);
+    Mix_VolumeMusic(volume);
 }
+
+void SoundManager::MinusVolume (int v)
+{
+    volume -= (MIX_MAX_VOLUME*v)/100;
+    Mix_Volume(-1, volume);
+    Mix_VolumeMusic(volume);
+}
+
+void SoundManager::MuteVolume ()
+{
+    volume = 0;
+    Mix_Volume(-1, volume);
+    Mix_VolumeMusic(volume);
+}
+
 
 int SoundManager::PlayMusic(int m)
 {
     if(Mix_PlayingMusic() == 0)
     {
-        Mix_Volume(1,volume);
+        Mix_VolumeMusic(volume);
         Mix_PlayMusic(filemusic[m],-1);
     }
     return 0;

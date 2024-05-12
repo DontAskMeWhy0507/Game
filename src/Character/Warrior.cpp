@@ -6,8 +6,8 @@
 #include "CollisionHandler.h"
 #include "Camera.h"
 #include "SoundManager.h"
+#include <fstream>
 #include <iostream>
-
 Warrior::Warrior(Properties* props):Character(props)
 {
 
@@ -17,16 +17,26 @@ Warrior::Warrior(Properties* props):Character(props)
     m_Collider->SetBuffer(-84, -45, -15,0 );          //thay đổi giá trị buffer để collider không bị lệch so với nhân vật
     m_RigidBody =  new Rigidbody();
     m_RigidBody->SetGravity(5.0f);
-
-
-
      m_Animation= new Animation();
     m_Animation->SetProps(m_TextureID,1,6,80);
     //(m_texture,1 row,8 frames,80ms ,SDL_FLIP_HORIZONTAL); thêm dấu phải trong ngoặc () nữa để flip
+
+
+}
+void Warrior ::change()
+{
+
+    std::ifstream nhap("assets/Saved.txt");
+    nhap >> SavedX >> SavedY;
+    std:: cout <<SavedX<<" "<<SavedY;
+    m_Transform->X = SavedX;
+    m_Transform->Y = SavedY;
 }
 
 void Warrior::Draw()
 {
+
+
     m_Animation->Draw(m_Transform->X,m_Transform->Y,m_Width,m_Height);
 
     //Hiển thị collider
@@ -250,6 +260,15 @@ void Warrior::Update(float dt)
 
 
     }
+
+     std::ofstream file("assets/Saved.txt");
+        if (file.is_open()) {
+            file << m_Transform->X << " " << m_Transform->Y; // Lưu vị trí x, y vào file
+            file.close();
+        } else {
+            std::cerr << "Không thể mở file để lưu trạng thái!\n";
+        }
+
     //Thay đổi m_Origin khi nhân vật di chuyển.
    // std::cout<<"x"<<m_Origin->X<<'y'<<m_Origin->Y<<std::endl;
     m_Origin->X = m_Transform->X - 1.6f*m_Width;
