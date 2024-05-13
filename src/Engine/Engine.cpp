@@ -72,6 +72,8 @@ bool Engine::Init(){
     TextureManager::GetInstance()->Load("controls", "assets/Menu/Controls.png");
     TextureManager::GetInstance()->Load("controlsred", "assets/Menu/Controlsred.png");
     TextureManager::GetInstance()->Load("controlsin", "assets/Menu/Controlsin.png");
+    TextureManager::GetInstance()->Load("ketthuc", "assets/Menu/EndGame.png");
+
 
     TextureManager::GetInstance()->Load("Background1", "assets/Images/spring.png");
     TextureManager::GetInstance()->Load("Background2", "assets/Images/he.png");
@@ -97,12 +99,15 @@ bool Engine::Init(){
 
     //Load Musice
     SoundManager::GetInstance()->LoadMusic("assets/sounds/MainSound.mp3");
+    SoundManager::GetInstance()->LoadMusic("assets/sounds/thoiemdungdi.mp3");
+
     SoundManager::GetInstance()->LoadSound("assets/sounds/JumpSound.wav");
     SoundManager::GetInstance()->LoadSound("assets/sounds/wall.mp3");
     SoundManager::GetInstance()->LoadSound("assets/sounds/Run.mp3");
 
 
-            SoundManager::GetInstance()->PlayMusic(0);
+
+    SoundManager::GetInstance()->PlayMusic(0);
 
     //
     State_Game = State::MENU;
@@ -155,7 +160,7 @@ void Engine::Events(){
                     SoundManager::GetInstance()->MuteVolume();
                 }
            }
-
+        if(player->EndGame()) State_Game = State::ENDGAME;
         if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_RETURN))   State_Game = State::GAME;
         if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_ESCAPE))   State_Game = State::MENU;
 }
@@ -165,6 +170,12 @@ void Engine::Update(){
         Vector2D Test(0,0);
     switch(State_Game)
     {
+    case State::ENDGAME:
+        SoundManager::GetInstance()->StopMusic();
+        SoundManager::GetInstance()->PlayMusic(0);
+
+    break;
+
     case State::MENU:
         //Camera::GetInstance()->SetTarget(&Test);
     break;
@@ -202,6 +213,12 @@ void Engine::Render(){
 
    switch(State_Game)
    {
+     case State::ENDGAME:
+        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
+        SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
+        TextureManager::GetInstance()->DrawMenu("ketthuc",0,0,960,640);
+        SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
+    break;
     case State::GAME:
         SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
         SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi

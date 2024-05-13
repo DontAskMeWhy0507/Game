@@ -24,7 +24,7 @@ class Warrior : public Character
         void Update(float dt) ;
         bool GetGround() {return m_IsGrounded;};
         void change();
-
+        bool EndGame();
    private:
         void AnimationState();
 
@@ -40,6 +40,7 @@ class Warrior : public Character
         bool IsJumpUp;
         bool IsTheKeyReleased;
         bool LastFalling = false;
+
 
         float SoMoi, SoCu;
         float luu;

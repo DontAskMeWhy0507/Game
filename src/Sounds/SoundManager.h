@@ -24,6 +24,7 @@ public:
     int PlaySound(int s);
     void quitMixer();
     void togglePlay();
+    void StopMusic();
 
 private:
     SoundManager();

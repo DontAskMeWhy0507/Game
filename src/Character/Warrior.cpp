@@ -33,6 +33,18 @@ void Warrior ::change()
     m_Transform->Y = SavedY;
 }
 
+bool Warrior :: EndGame()
+{
+
+    if( m_Transform->X >= 349.847f
+   && m_Transform->Y <=1758.67f )
+   {
+
+       return true;
+   }
+   return false;
+}
+
 void Warrior::Draw()
 {
 

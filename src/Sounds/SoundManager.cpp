@@ -61,6 +61,7 @@ void SoundManager::MuteVolume ()
 
 int SoundManager::PlayMusic(int m)
 {
+
     if(Mix_PlayingMusic() == 0)
     {
         Mix_VolumeMusic(volume);
@@ -68,13 +69,25 @@ int SoundManager::PlayMusic(int m)
     }
     return 0;
 }
+void SoundManager::StopMusic()
+{
+   if(filemusic.size()>1)
+   {
+    Mix_HaltMusic();
+    filemusic[0] = filemusic [1];
+    filemusic.pop_back();
+   }
+
+}
+
+
 int SoundManager::PlaySound(int s)
 {
     Mix_Volume(-1,volume);
     //Xử lý tiếng chạy bị lồng vào nhau.
    // if(!Mix_Playing(-1))
     Mix_PlayChannel(-1,filesounds[s],0);
-  //  else if(s!=2) Mix_PlayChannel(-1,filesounds[s],0);
+   // else if(s!=2) Mix_PlayChannel(-1,filesounds[s],0);
     return 0;
 }
 
