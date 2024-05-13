@@ -2,9 +2,9 @@
 ![menu](https://github.com/VuTienTuanTrung/Game/assets/62925438/1d2e443b-0d05-4eed-9df6-ae10ec0acdde)
 
 ## 1. Thành viên nhóm
-- Vũ Tiến Tuấn Trung (Code, đóng góp 4/10)
-- Ngô Đức Thịnh (Đồ họa, đóng góp 4/10)
-- Doãn Đoàn Đức Minh (Hỗ trợ, đóng góp 2/10)
+- Vũ Tiến Tuấn Trung (Code, đóng góp 4.5/10)
+- Ngô Đức Thịnh (Đồ họa, đóng góp 4.5/10)
+- Doãn Đoàn Đức Minh (Hỗ trợ, đóng góp 1/10)
 
 ## 2. Giới thiệu
 - Game được lấy ý tưởng từ jump king, thay vì hoàng tử đi cứu công chúa thì game là hành trình trở về nhà của chim cánh cụt.
