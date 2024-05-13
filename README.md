@@ -12,36 +12,45 @@
 ## 3. Cốt truyện : 
 Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bão tuyết ập đến, Brim bị cơn bão che mất tầm nhìn và không thấy bạn mình đâu. Bị lạc giữa cơn bão tuyết, Brim tìm thấy một cái hang và quyết định trú tại đấy. Sáng hôm sau khi cơn bão đã qua, Brim  tỉnh dậy và không biết đây là đâu cả. Brim quyết tâm tìm đường về nhà. Liệu Brim có về đến nhà không?
 
-## 4. Phím bấm : 
+## 4. ĐIỀU MÀ NHÓM THẤY TÂM ĐẮC Ở GAME
+###  - Cơ chế nhảy cực tốt. Cơ chế này là phần chính mà nhóm chú trọng khi làm game. Để cho game thật khó thì ta phải có 5 điều:
+  1 là khi nhảy lên thì người chơi không thể di chuyển trái phải ở trên không cho đến khi chạm đất ở dưới.
+  2 là khi ấn giữ nút nhảy càng lâu thì người chơi nhảy càng cao, xa.
+  3 là khi ấn giữ đến một khoảng thời gian nhất định (2 giây) thì nhân vật tự động nhảy lên mà không phải thả nút space ra.
+  4 là khi nhảy đập tường thì nhân vật sẽ bị bật lại. Còn khi đi ở dưới đất đập tường chỉ bị chặn lại.
+  5 là khi bị ngã luôn có một quán tính chứ không rơi thẳng đứng xuống.
+
+### - Có thể chỉnh sửa lại map rất dễ dàng. Tạo tiền đề để phát triển thêm nhiều map cho game.
+### - Hệ thống âm thanh khi nhân vật va chạm, nhảy,...
+### - Cơ chế tự động save game cho mỗi vị trí mà nhân vật di chuyển mà không cần phải ấn nút save. Nếu máy tự dưng sập nguồn thì vẫn có thể chơi tiếp mà không lo chơi lại từ đầu.
+### - Nhóm đã căn chỉnh map để người chơi rất khó để phá đảo trong thời gian ngắn, nếu bị ngã thì ngã rất sâu.
+  
+## 5. Cách chơi
+### Nhảy lên đến cao nhất để đưa chú chim cánh cụt trở về nhà
+  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/8a42e94a-34d9-445e-b908-efd57bfc3f52)
+### Phím bấm : 
 - Enter.
 - Space.
 - A.
 - D.
-  
-## 5. Cách chơi
-- Nhảy lên đến cao nhất để đưa chú chim cánh cụt trở về nhà
-  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/8a42e94a-34d9-445e-b908-efd57bfc3f52)
 
-## 6. Điều mà nhóm thấy tâm đắc ở game
-- Có thể chỉnh sửa lại map rất dễ dàng.
-- Cơ chế nhảy tốt.
-- Khó để phá đảo trong thời gian ngắn.
 ## 6. Cấu trúc game 
 Gồm phần main.cpp để chạy vòng lặp cho nó. 
 Lớp Engine là lớp chính cho hàm main. Gồm Init (khởi tạo game), Event (), Update, Renderer, Clean, Quit. Và các lớp khác deltaTim,camera,sound, physics,...
-
   
 ## 7. Phần Game có tham khảo một số nguồn
+### Code
 - TinyXML : https://github.com/vmayoral/tinyxml
-- Toàn bộ Class Map : https://daynhauhoc.com/t/hoi-ve-tile-map-editor-voi-sdl-2/89284
+### Đồ họa
 - Map tilesets : https://itch.io
 - Nhân vật : https://devhive.itch.io/penguin
 - Âm thanh : https://pixabay.com
 
 
 ## 8. Trong tương lai.
-- Phát triển phần save game.
 - Thêm nhiều bộ skin cho chim cánh cụt.
 - Thêm các tính năng : mặt phẳng nghiêng, gió, trơn trượt,..
+
+## 9. Link demo game : https://www.youtube.com/watch?v=IWFVUi9w2mU
   
   
