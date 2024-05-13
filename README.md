@@ -14,11 +14,11 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 
 ## 4. ĐIỀU MÀ NHÓM THẤY TÂM ĐẮC Ở GAME
 ###  - Cơ chế nhảy cực tốt. Cơ chế này là phần chính mà nhóm chú trọng khi làm game. Để cho game thật khó thì ta phải có 5 điều:
-  1 là khi nhảy lên thì người chơi không thể di chuyển trái phải ở trên không cho đến khi chạm đất ở dưới.
-  2 là khi ấn giữ nút nhảy càng lâu thì người chơi nhảy càng cao, xa.
-  3 là khi ấn giữ đến một khoảng thời gian nhất định (2 giây) thì nhân vật tự động nhảy lên mà không phải thả nút space ra.
-  4 là khi nhảy đập tường thì nhân vật sẽ bị bật lại. Còn khi đi ở dưới đất đập tường chỉ bị chặn lại.
-  5 là khi bị ngã luôn có một quán tính chứ không rơi thẳng đứng xuống.
+- 1 là khi nhảy lên thì người chơi không thể di chuyển trái phải ở trên không cho đến khi chạm đất ở dưới.
+- 2 là khi ấn giữ nút nhảy càng lâu thì người chơi nhảy càng cao, xa.
+- 3 là khi ấn giữ đến một khoảng thời gian nhất định (2 giây) thì nhân vật tự động nhảy lên mà không phải thả nút space ra.
+- 4 là khi nhảy đập tường thì nhân vật sẽ bị bật lại. Còn khi đi ở dưới đất đập tường chỉ bị chặn lại.
+- 5 là khi bị ngã luôn có một quán tính chứ không rơi thẳng đứng xuống.
 
 ### - Có thể chỉnh sửa lại map rất dễ dàng. Tạo tiền đề để phát triển thêm nhiều map cho game.
 ### - Hệ thống âm thanh khi nhân vật va chạm, nhảy,...
