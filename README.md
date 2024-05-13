@@ -3,7 +3,7 @@
 
 ## 1. Thành viên nhóm
 - Vũ Tiến Tuấn Trung (Code, đóng góp 4/10)
-- Ngô Đức Thịnh (Map, đóng góp 4/10)
+- Ngô Đức Thịnh (Đồ họa, đóng góp 4/10)
 - Doãn Đoàn Đức Minh (Hỗ trợ, đóng góp 2/10)
 
 ## 2. Giới thiệu
