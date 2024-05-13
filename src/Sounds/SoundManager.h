@@ -30,7 +30,7 @@ private:
     std::vector <Mix_Chunk*> filesounds;
     std::vector <Mix_Music*> filemusic;
     static SoundManager* s_Instance;
-    int volume = (MIX_MAX_VOLUME*10)/100;;
+    int volume = (MIX_MAX_VOLUME*10)/100;
 
 };
 
