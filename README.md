@@ -29,14 +29,18 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 ### Nhảy lên đến cao nhất để đưa chú chim cánh cụt trở về nhà
   ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/8a42e94a-34d9-445e-b908-efd57bfc3f52)
 ### Phím bấm : 
+- Esc.
 - Enter.
 - Space.
 - A.
 - D.
 
 ## 6. Cấu trúc game 
-Gồm phần main.cpp để chạy vòng lặp cho nó. 
-Lớp Engine là lớp chính cho hàm main. Gồm Init (khởi tạo game), Event (), Update, Renderer, Clean, Quit. Và các lớp khác deltaTim,camera,sound, physics,...
+### - Gồm file chính main.cpp và 2 folder src để lưu code, assets để lưu ảnh, âm thanh,..
+
+- Phần main.cpp để chạy vòng lặp game.
+-  Lớp Engine là lớp chính cho hàm main. Gồm Init, Event, Update, Renderer, Clean, Quit.
+- Các lớp khác Timer (trả về DeltaTime để sửa lỗi máy khỏe nhân vật nhảy cao còn máy yếu nhân vật nhảy thấp), camera, collision, sound, physics,...
   
 ## 7. Phần Game có tham khảo một số nguồn
 ### Code
