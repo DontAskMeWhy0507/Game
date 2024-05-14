@@ -1,5 +1,5 @@
 # A difficult game about jumping
-![menu](https://github.com/VuTienTuanTrung/Game/assets/62925438/1d2e443b-0d05-4eed-9df6-ae10ec0acdde)
+![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/58941bfc-63ca-415c-81b9-287a5e8f1a2f)
 
 ## 1. Thành viên nhóm
 - Vũ Tiến Tuấn Trung (Code, đóng góp 4.5/10)
@@ -29,7 +29,19 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
   
 ## 5. Cách chơi
 ### Nhảy lên đến cao nhất để đưa chú chim cánh cụt trở về nhà
-  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/8a42e94a-34d9-445e-b908-efd57bfc3f52)
+
+
+  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/3a1a8f3b-3cea-4a05-bbd7-6966fcb0708d)
+- Hình ảnh khi trong game
+
+  
+  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/d3798fc4-0327-461b-ae24-82388cd80d97)
+- Hướng dẫn game
+
+  
+  ![image](https://github.com/VuTienTuanTrung/Game/assets/62925438/96c29df0-8da1-40c4-8501-f2762650d60d)
+- Sau khi hoành thành game
+
 ### Phím bấm : 
 - Esc.
 - Enter.
