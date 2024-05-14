@@ -13,6 +13,8 @@ class Timer{
         void Tick();
         inline float GetDeltaTime(){return m_DeltaTime;}
         inline static Timer* GetInstance(){return s_Instance = (s_Instance != nullptr)? s_Instance : new Timer();}
+        int TimeCount();
+        void TimePause();
 
     private:
          Timer();

@@ -5,6 +5,7 @@
 #include "SDL_image.h"
 #include "GameMap.h"
 #include "GameStates.h"
+#include "SDL_ttf.h"
 
 #define SCREEN_WIDTH 960
 #define SCREEN_HEIGHT 640
@@ -34,7 +35,12 @@ class Engine {
         Engine(){}
         bool m_IsRunning;
 
+        std::string s;
+        float tmp;
+        int Jumps;
+        int highest;
 
+        TTF_Font* font;
         GameMap* m_LevelMap;
         SDL_Window* m_Window;
         SDL_Renderer* m_Renderer;

@@ -27,10 +27,18 @@ void Warrior ::change()
 {
 
     std::ifstream nhap("assets/Saved.txt");
-    nhap >> SavedX >> SavedY;
-    std:: cout <<SavedX<<" "<<SavedY;
+    nhap >> SavedX >> SavedY >> TotalJumps >> Highest;
     m_Transform->X = SavedX;
     m_Transform->Y = SavedY;
+}
+int Warrior :: Jumps()
+{
+    return TotalJumps;
+}
+
+int Warrior :: High()
+{
+    return Highest;
 }
 
 bool Warrior :: EndGame()
@@ -80,6 +88,7 @@ void Warrior::Update(float dt)
     //Xử lý âm thanh nhảy
     if(IsTheKeyReleased)    {
             SoundManager::GetInstance()->PlaySound(0);
+            TotalJumps++;
     }
 
     m_RigidBody->UnSetForce();
@@ -272,10 +281,11 @@ void Warrior::Update(float dt)
 
 
     }
-
+    int tmp = m_Transform->Y;
+    Highest = std::max(9373 - tmp,Highest);
      std::ofstream file("assets/Saved.txt");
         if (file.is_open()) {
-            file << m_Transform->X << " " << m_Transform->Y; // Lưu vị trí x, y vào file
+            file << m_Transform->X << " " << m_Transform->Y << " "<< TotalJumps<<" "<<Highest; // Lưu vị trí x, y vào file
             file.close();
         } else {
             std::cerr << "Không thể mở file để lưu trạng thái!\n";

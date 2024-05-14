@@ -378,7 +378,7 @@
 1714777121 source:c:\working\lap trinh c++ nang cao\game\src\states\gamestates.cpp
 	"GameStates.h"
 
-1713228611 source:c:\working\game\main.cpp
+1715639036 source:c:\working\game\main.cpp
 	<iostream>
 	"SDL.h"
 	"Engine.h"
@@ -386,11 +386,12 @@
 	"SDL_ttf.h"
 	"Timer.h"
 
-1715606679 c:\working\game\src\engine\engine.h
+1715661431 c:\working\game\src\engine\engine.h
 	"SDL.h"
 	"SDL_image.h"
 	"GameMap.h"
 	"GameStates.h"
+	"SDL_ttf.h"
 
 1712740375 c:\working\game\src\map\gamemap.h
 	<vector>
@@ -414,7 +415,7 @@
 1713443282 c:\working\game\src\physics\vector2d.h
 	<iostream>
 
-1714777627 c:\working\game\src\timer\timer.h
+1715641076 c:\working\game\src\timer\timer.h
 
 1712741015 source:c:\working\game\src\animation\animation.cpp
 	"Animation.h"
@@ -438,7 +439,7 @@
 	"Engine.h"
 	"Vector2D.h"
 
-1715607504 source:c:\working\game\src\character\warrior.cpp
+1715661462 source:c:\working\game\src\character\warrior.cpp
 	"Warrior.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -450,7 +451,7 @@
 	<fstream>
 	<iostream>
 
-1715604104 c:\working\game\src\character\warrior.h
+1715661431 c:\working\game\src\character\warrior.h
 	"Character.h"
 	"Animation.h"
 	"RigidBody.h"
@@ -494,7 +495,7 @@
 	"Engine.h"
 	<iostream>
 
-1715607336 source:c:\working\game\src\engine\engine.cpp
+1715662442 source:c:\working\game\src\engine\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	"Input.h"
@@ -507,6 +508,7 @@
 	"SoundManager.h"
 	"Vector2D.h"
 	<fstream>
+	"SDL_ttf.h"
 
 1712741208 c:\working\game\src\map\mapparser.h
 	<map>

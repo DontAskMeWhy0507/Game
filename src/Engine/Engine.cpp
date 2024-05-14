@@ -10,12 +10,26 @@
 #include "SoundManager.h"
 #include "Vector2D.h"
 #include <fstream>
+#include "SDL_ttf.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
 //SoundManager* SoundManager::s_Instance = nullptr;
 
 bool Engine::Init(){
+
+    if (TTF_Init() != 0) {
+        SDL_Log("Failed to initialize SDL_ttf: %s", TTF_GetError());
+        return false;
+    }
+
+     font = TTF_OpenFont("assets/Font/text.ttf", 24);
+        if (font == nullptr) {
+            SDL_Log("Failed to load font: %s", TTF_GetError());
+            return false;
+        }
+
+
 
     if(SDL_Init(SDL_INIT_VIDEO)!=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG)!= 0){
         SDL_Log("Failed to initialize SDL: %s", SDL_GetError());
@@ -24,7 +38,7 @@ bool Engine::Init(){
     SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
     //để có thể mở rộng game toàn màn hình hoặc thu nhỏ lại tùy ý
 
-    m_Window = SDL_CreateWindow("Soft Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
+    m_Window = SDL_CreateWindow("A Difficult game about jumping", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
     if(m_Window == nullptr){
         SDL_Log("Failed to create Window: %s", SDL_GetError());
         return false;
@@ -71,8 +85,8 @@ bool Engine::Init(){
 
     TextureManager::GetInstance()->Load("controls", "assets/Menu/Controls.png");
     TextureManager::GetInstance()->Load("controlsred", "assets/Menu/Controlsred.png");
-    TextureManager::GetInstance()->Load("controlsin", "assets/Menu/Controlsin.png");
-    TextureManager::GetInstance()->Load("ketthuc", "assets/Menu/EndGame.png");
+    TextureManager::GetInstance()->Load("controlsin", "assets/Menu/Controlsin.jpg");
+    TextureManager::GetInstance()->Load("ketthuc", "assets/Menu/EndGame.jpg");
 
 
     TextureManager::GetInstance()->Load("Background1", "assets/Images/spring.png");
@@ -176,9 +190,6 @@ void Engine::Update(){
 
     break;
 
-    case State::MENU:
-        //Camera::GetInstance()->SetTarget(&Test);
-    break;
 
 
     case State::GAME:
@@ -205,22 +216,42 @@ void Engine::Update(){
         m_LevelMap->Update();
         Camera::GetInstance()->Update();
     break;
+       case State::MENU:
+        //Camera::GetInstance()->SetTarget(&Test);
+
+
+    break;
+
 
 }
 }
 void Engine::Render(){
             Vector2D* mouse =  Input::GetInstance()->GetMousePosition();
+        highest = player ->High();
+        Jumps = player -> Jumps();
+        s = "Jumps : " + std::to_string(Jumps) + "    Highest : " + std::to_string(highest)+ "m";
+           //text ttf
+        SDL_Color color = {255, 0, 0};  // white color
+        SDL_Surface* textSurface  = TTF_RenderText_Solid(font, s.c_str(), color);
+        if (textSurface  == nullptr) {
+            SDL_Log("Failed to create text surface: %s", TTF_GetError());
+            TTF_CloseFont(font);
+            return;
+        }
 
+        SDL_Texture* textureText  = SDL_CreateTextureFromSurface(m_Renderer, textSurface );
+        if (textureText  == nullptr) {
+            SDL_Log("Failed to create text texture: %s", SDL_GetError());
+        }
+        SDL_Rect Message_rect;
+        Message_rect.x = 20;
+        Message_rect.y = 0;
+        Message_rect.w = textSurface->w;
+        Message_rect.h = textSurface->h;
    switch(State_Game)
    {
-     case State::ENDGAME:
-        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
-        SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
-        TextureManager::GetInstance()->DrawMenu("ketthuc",0,0,960,640);
-        SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
-    break;
-    case State::GAME:
-        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
+case State::CONTINUE:
+                SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
         SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
        /*Load ảnh theo thứ tự nền xong rồi mới nhân vật. Nếu không nhân vật sẽ ở sau nền*/
 
@@ -235,27 +266,12 @@ void Engine::Render(){
         m_LevelMap->Render();                                           //Tạo map tiled
         // render texture
         player->Draw();                                                     //vẽ player lên trên game
-        SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
-    break;
 
+        SDL_RenderCopy(m_Renderer, textureText , nullptr,  &Message_rect);
 
+        SDL_FreeSurface(textSurface);
+        SDL_DestroyTexture(textureText);
 
-   case State::CONTINUE:
-        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
-        SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
-       /*Load ảnh theo thứ tự nền xong rồi mới nhân vật. Nếu không nhân vật sẽ ở sau nền*/
-
-        TextureManager::GetInstance()->Draw("Background1",0,4250,1504,800);
-        TextureManager::GetInstance()->Draw("Background2",0,3450,1504,800);
-        TextureManager::GetInstance()->Draw("Background3",0,2650,1504,800);
-        TextureManager::GetInstance()->Draw("Background4",0,1850,1504,800);
-        TextureManager::GetInstance()->Draw("Background5",0,1050,1504,800);
-        TextureManager::GetInstance()->Draw("Background6",0,500,1504,800);
-
-
-        m_LevelMap->Render();                                           //Tạo map tiled
-        // render texture
-        player->Draw();                                                     //vẽ player lên trên game
         SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
     break;
 
@@ -293,6 +309,9 @@ void Engine::Render(){
             SDL_RenderPresent(m_Renderer);
         break;
     case State::MENU:
+
+
+
         SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);
         SDL_RenderClear(m_Renderer);
         TextureManager::GetInstance()->DrawMenu("Menu",0,0,960,640);//vẽ background lên trên texture.(x,y,width,height)
@@ -306,9 +325,51 @@ void Engine::Render(){
             if(mouse->X >=100&&mouse->Y>=500&&mouse->X<=400&mouse->Y<=600)        TextureManager::GetInstance()->DrawMenu("quitred",100,500,300,100);
             else    TextureManager::GetInstance()->DrawMenu("quit",100,500,300,100);
 
+
+
         SDL_RenderPresent(m_Renderer);
         break;
+         case State::ENDGAME:
+        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
+        SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
+        TextureManager::GetInstance()->DrawMenu("ketthuc",0,0,960,640);
+
+
+
+
+        //phan khac
+        SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
+    break;
+    case State::GAME:
+        SDL_SetRenderDrawColor(m_Renderer, 124, 418, 954, 955);             //Màu nền của gamme
+        SDL_RenderClear(m_Renderer);                                        //Xóa bỏ nền đen mặc định gây nhiều lỗi
+       /*Load ảnh theo thứ tự nền xong rồi mới nhân vật. Nếu không nhân vật sẽ ở sau nền*/
+
+        TextureManager::GetInstance()->Draw("Background1",0,4250,1504,800);
+        TextureManager::GetInstance()->Draw("Background2",0,3450,1504,800);
+        TextureManager::GetInstance()->Draw("Background3",0,2650,1504,800);
+        TextureManager::GetInstance()->Draw("Background4",0,1850,1504,800);
+        TextureManager::GetInstance()->Draw("Background5",0,1050,1504,800);
+        TextureManager::GetInstance()->Draw("Background6",0,500,1504,800);
+
+
+        m_LevelMap->Render();                                           //Tạo map tiled
+        // render texture
+        player->Draw();                                                     //vẽ player lên trên game
+
+        SDL_RenderCopy(m_Renderer, textureText , nullptr,  &Message_rect);
+
+        SDL_FreeSurface(textSurface);
+        SDL_DestroyTexture(textureText);
+
+        SDL_RenderPresent(m_Renderer);                                       //Update m_Renderer lên màn hình sau khi nó được tạo mới
+    break;
+
+
+
+
    }
+
 
 }
 

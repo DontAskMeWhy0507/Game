@@ -20,10 +20,12 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 - 4 là khi nhảy đập tường thì nhân vật sẽ bị bật lại. Còn khi đi ở dưới đất đập tường chỉ bị chặn lại.
 - 5 là khi bị ngã luôn có một quán tính chứ không rơi thẳng đứng xuống.
 
+### - Hệ thống vật lý trong game giống 99% ngoài đời thực.
 ### - Có thể chỉnh sửa lại map rất dễ dàng. Tạo tiền đề để phát triển thêm nhiều map cho game.
 ### - Hệ thống âm thanh khi nhân vật va chạm, nhảy,...
 ### - Cơ chế tự động save game cho mỗi vị trí mà nhân vật di chuyển mà không cần phải ấn nút save. Nếu máy tự dưng sập nguồn thì vẫn có thể chơi tiếp mà không lo chơi lại từ đầu.
 ### - Nhóm đã căn chỉnh map để người chơi rất khó để phá đảo trong thời gian ngắn, nếu bị ngã thì ngã rất sâu.
+### - Có thông số hightest, total jumps ở góc trên bên phải giúp người chơi dễ theo dõi.
   
 ## 5. Cách chơi
 ### Nhảy lên đến cao nhất để đưa chú chim cánh cụt trở về nhà
