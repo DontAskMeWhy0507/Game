@@ -1,0 +1,203 @@
+# depslib dependency file v1.0
+1712741015 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1714778161 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\animation.h
+	<string>
+	"SDL.h"
+
+1715420926 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\texturemanager.h
+	<string>
+	"SDL.h"
+	<map>
+
+1714981819 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\camera.cpp
+	"Camera.h"
+	<iostream>
+
+1713502576 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\camera.h
+	"SDL.h"
+	"Engine.h"
+	"Vector2D.h"
+
+1715661431 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\engine.h
+	"SDL.h"
+	"SDL_image.h"
+	"GameMap.h"
+	"GameStates.h"
+	"SDL_ttf.h"
+
+1712740375 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\gamemap.h
+	<vector>
+	"Layer.h"
+
+1712740375 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\layer.h
+
+1715604084 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\gamestates.h
+	"GameObject.h"
+
+1715445796 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\gameobject.h
+	"IObject.h"
+	"Transform.h"
+	"SDL.h"
+
+1712740375 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\iobject.h
+
+1712740012 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\transform.h
+	"Vector2D.h"
+
+1713443282 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\vector2d.h
+	<iostream>
+
+1713150395 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+	<iostream>
+
+1712741015 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1712740375 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tilelayer.h
+	<string>
+	<vector>
+	"Layer.h"
+	"Vector2D.h"
+
+1715662442 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\engine.cpp
+	"Engine.h"
+	"TextureManager.h"
+	"Input.h"
+	"Warrior.h"
+	"SDL.h"
+	"Timer.h"
+	"MapParser.h"
+	<iostream>
+	"Camera.h"
+	"SoundManager.h"
+	"Vector2D.h"
+	<fstream>
+	"SDL_ttf.h"
+
+1715440514 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\input.h
+	"SDL.h"
+	<vector>
+	"Vector2D.h"
+
+1715661431 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\warrior.h
+	"Character.h"
+	"Animation.h"
+	"RigidBody.h"
+	"Collider.h"
+	"Vector2D.h"
+
+1714809066 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\character.h
+	"GameObject.h"
+
+1712740012 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\rigidbody.h
+	"Vector2D.h"
+
+1715715301 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\collider.h
+	<SDL.h>
+
+1715641076 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\timer.h
+
+1712741208 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	"tinyxml.h"
+	"TileLayer.h"
+
+1711117275 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1711117275 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinystr.h
+	<assert.h>
+	<string.h>
+
+1715606895 c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\soundmanager.h
+	"SDL.h"
+	<string>
+	<vector>
+	<iostream>
+	"SDL_mixer.h"
+
+1714777121 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\gamestates.cpp
+	"GameStates.h"
+
+1715450032 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\input.cpp
+	"Input.h"
+	"Engine.h"
+	"Timer.h"
+	<iostream>
+
+1715639036 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\main.cpp
+	<iostream>
+	"SDL.h"
+	"Engine.h"
+	"SDL_mixer.h"
+	"SDL_ttf.h"
+	"Timer.h"
+
+1712741335 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\mapparser.cpp
+	"MapParser.h"
+
+1715607409 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\soundmanager.cpp
+	"SoundManager.h"
+	"SDL_mixer.h"
+
+1715420926 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+	"Camera.h"
+
+1712740375 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tilelayer.cpp
+	"TileLayer.h"
+	"TextureManager.h"
+
+1712980254 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\timer.cpp
+	"Timer.h"
+	"SDL.h"
+
+1711117275 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinystr.cpp
+	"tinystr.h"
+
+1711117275 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1711117275 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1711117275 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1715661462 source:c:\working\codeblocktestc++\gamesdl2\newproject\testgame1\1234\game\src\warrior.cpp
+	"Warrior.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Engine.h"
+	"CollisionHandler.h"
+	"Camera.h"
+	"SoundManager.h"
+	<fstream>
+	<iostream>
+

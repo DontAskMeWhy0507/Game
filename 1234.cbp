@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="1234" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/1234" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/1234" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="src/Animation.cpp" />
+		<Unit filename="src/Animation.h" />
+		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Camera.h" />
+		<Unit filename="src/Character.h" />
+		<Unit filename="src/Collider.h" />
+		<Unit filename="src/CollisionHandler.cpp" />
+		<Unit filename="src/CollisionHandler.h" />
+		<Unit filename="src/Engine.cpp" />
+		<Unit filename="src/Engine.h" />
+		<Unit filename="src/GameMap.h" />
+		<Unit filename="src/GameObject.h" />
+		<Unit filename="src/GameStates.cpp" />
+		<Unit filename="src/GameStates.h" />
+		<Unit filename="src/IObject.h" />
+		<Unit filename="src/Input.cpp" />
+		<Unit filename="src/Input.h" />
+		<Unit filename="src/Layer.h" />
+		<Unit filename="src/MapParser.cpp" />
+		<Unit filename="src/MapParser.h" />
+		<Unit filename="src/Rigidbody.h" />
+		<Unit filename="src/SoundManager.cpp" />
+		<Unit filename="src/SoundManager.h" />
+		<Unit filename="src/TextureManager.cpp" />
+		<Unit filename="src/TextureManager.h" />
+		<Unit filename="src/TileLayer.cpp" />
+		<Unit filename="src/TileLayer.h" />
+		<Unit filename="src/Timer.cpp" />
+		<Unit filename="src/Timer.h" />
+		<Unit filename="src/Transform.h" />
+		<Unit filename="src/Vector2D.h" />
+		<Unit filename="src/Warrior.cpp" />
+		<Unit filename="src/Warrior.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/tinystr.cpp" />
+		<Unit filename="src/tinystr.h" />
+		<Unit filename="src/tinyxml.cpp" />
+		<Unit filename="src/tinyxml.h" />
+		<Unit filename="src/tinyxmlerror.cpp" />
+		<Unit filename="src/tinyxmlparser.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
