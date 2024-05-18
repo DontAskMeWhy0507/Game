@@ -93,6 +93,11 @@ void Warrior::Update(float dt)
 
     m_RigidBody->UnSetForce();
 
+    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_G))
+    {
+        m_Transform->Y -= 200.0f;
+    }
+
     //Run backward
      if( Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)&&m_IsGrounded == true && !Input::GetInstance()->GetKeyDown(SDL_SCANCODE_SPACE))
    {
