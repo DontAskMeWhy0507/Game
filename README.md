@@ -49,12 +49,13 @@ Chim cánh cụt Brim đi chơi cùng bạn bè nhưng bỗng dưng có cơn bã
 - A.
 - D.
 
-## 6. Cấu trúc game 
-### - Gồm file chính main.cpp và 2 folder src để lưu code, assets để lưu ảnh, âm thanh,..
+## 6. Hướng dẫn cài đặc 
+### setup môi trường codeblock
+- Tự cài theo hướng dẫn trên mạng
+### dùng makefile
+- dùng lệnh mingw32-make hoặc make trên terminal để tạo file executable
 
-- Phần main.cpp để chạy vòng lặp game.
--  Lớp Engine là lớp chính cho hàm main. Gồm Init, Event, Update, Renderer, Clean, Quit.
-- Các lớp khác Timer (trả về DeltaTime để sửa lỗi máy khỏe nhân vật nhảy cao còn máy yếu nhân vật nhảy thấp), camera, collision, sound, physics,...
+
   
 ## 7. Phần Game có tham khảo một số nguồn
 ### Code
